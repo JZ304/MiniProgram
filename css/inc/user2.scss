@@ -1,0 +1,39 @@
+$sub_path: 'user2/';
+.user.user2{
+  span{ position: absolute;}
+  .bg{
+    @include pic('bg.jpg', 750, 1450);
+    left: 0;
+    bottom: 0;
+  }
+  .btn-bean{
+    top: 32px;
+    right: 35px;
+  }
+  .info-user{
+    top: 6vh;
+  }
+  .unopen{
+    @include pic('unopen.png', 450, 651);
+    left: 147px;
+    top: calc(13vh + 230px);
+  }
+  .btn-back{
+    @include pic('btn-back.png', 253, 230);
+    left: 248px;
+    top: calc(15vh + 900px);
+  }
+  .top-mask{
+    height: 200px;
+    width: 750px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  }
+}
+
+@media screen and (max-height: 1300px){
+  .user.user2 .btn-back{
+    @include pic('btn-back2.png', 218, 40);
+    left: 40px;
+    top: 30px;
+  }
+}

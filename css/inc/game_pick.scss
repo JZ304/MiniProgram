@@ -1,0 +1,14 @@
+$sub_path: 'pick/';
+.gamePick{
+  .bg{
+    @include bg('bg.jpg', 750px, 100vh);
+    left: 0;
+    top: 0;
+  }
+  .info-chanceout{ @include pic('chanceout.png', 311, 452);}
+  .tips span{
+    @include bg('tips.png', 750px, 100vh);
+    left: 0;
+    top: 0;
+  }
+}

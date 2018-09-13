@@ -1,0 +1,76 @@
+$sub_path: 'intro/';
+.intro{
+  background: #09316f;
+  .container{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  .p1{
+    @include pic('1.png', 750, 970);
+    left: 0px;
+    top: 0px;
+  }
+  .p2{
+    @include pic('2.png', 750, 970);
+    left: 0px;
+    top: 970px;
+  }
+  .p3{
+    @include pic('3.png', 750, 1400);
+    left: 0px;
+    top: 1940px;
+  }
+  .p4{
+    @include pic('4.png', 750, 550);
+    left: 0px;
+    top: 3340px;
+  }
+  .medal{
+    @include pic('medal.gif', 320, 248);
+    left: 215px;
+    top: 154px;
+  }
+  .sub{
+    @include pic('4-2.png', 750, 296);
+    left: 0;
+    top: 50px;
+  }
+  .p5{
+    @include pic('5.png', 750, 1380);
+    left: 0px;
+    top: 3890px;
+  }
+  .p6{
+    @include pic('6.png', 750, 1270);
+    left: 0px;
+    top: 5270px;
+  }
+  .p7{
+    @include pic('7.png', 750, 1300);
+    left: 0px;
+    top: 6540px;
+  }
+  .p8{
+    @include pic('8.png', 750, 1220);
+    left: 0px;
+    top: 7840px;
+  }
+  .btn-go{ @include pic('btn-go.png', 169, 60);}
+  .btn1{
+    left: 415px;
+    top: 234px;
+  }
+  .btn2{
+    left: 87px;
+    top: 597px;
+  }
+  .btn3{
+    left: 415px;
+    top: 984px;
+  }
+  // .btn-back{
+  //   @include pic('btn-back.png', 253, 230);
+  //   left: 248px;
+  //   bottom: 147px;
+  // }
+}

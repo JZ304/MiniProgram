@@ -1,0 +1,198 @@
+// variables
+// $url: '../img/';
+$url: 'https://oss.rzthinkmore.com/xxw180601/img/';
+$sub_path: '';
+
+// minxin
+@mixin pic($pic, $width, $height, $origin: center, $repeat: no-repeat) {
+  background: url($url + $sub_path + $pic + '?v=7') $repeat $origin;
+  width: #{$width}px;
+  height: #{$height}px;
+}
+@mixin bg($pic, $width, $height, $origin: center, $repeat: no-repeat) {
+  background: url($url + $sub_path + $pic) $repeat $origin;
+  width: $width;
+  height: $height;
+}
+@mixin rsize($name, $val) {
+  #{$name}: calc((100vh - 1206px) / 2 + #{$val});
+}
+@mixin fmargin($val) {
+  margin: calc((100vh - 1206px) / 2 + #{$val}) auto 0;
+}
+@mixin keyframes($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// base styles
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #f0f0f0;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+}
+.container{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  // overflow-y: hidden;
+}
+a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  position: absolute;
+  pointer-events: auto;
+}
+div{position: relative;}
+li{ list-style: none;}
+span{
+  position: absolute;
+  user-select: none;
+  pointer-events: none;
+}
+input{
+  background: transparent;
+  outline: none;
+}
+.abs{ position: absolute!important;}
+.hide{ display: none;}
+.mask{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+// load
+.loading{
+  background: #09316f;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  .pic{
+    @include pic('loading.png', 307, 293);
+    @include rsize(top, 300px);
+    left: 205px;
+  }
+  p{
+    color: #fff;
+    font-size: 36px;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    @include rsize(top, 620px);
+  }
+}
+
+.unbind{
+  .box-info{
+    @include pic('box-info.png', 528, 809);
+    @include rsize(top, 120px);
+    left: 148px;
+  }
+  .btn-ok{
+    @include pic('btn-ok.png', 253, 230);
+    @include rsize(top, 880px);
+    left: 248px;
+  }
+
+  .box-form{
+    @include pic('form.png', 616, 710);
+    @include rsize(top, 150px);
+    left: 92px;
+  }
+  .btn-submit{
+    @include pic('btn-submit.png', 253, 230);
+    @include rsize(top, 840px);
+    left: 248px;
+  }
+  .btn-verify{
+    width: 148px;
+    background: transparent;
+    top: 391px;
+    left: 296px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 66px;
+    color: #020d1d;
+  }
+
+  input{
+    width: 220px;
+    height: 42px;
+    line-height: 42px;
+    position: absolute;
+    left: 218px;
+    color: #44d9f6;
+    font-size: 24px;
+    padding: 0 10px;
+    &::-webkit-input-placeholder {
+      color: rgba(68, 217, 246, .4);
+    }
+    &.nickname{ top: 180px;}
+    &.tel{ top: 292px;}
+    &.code{
+      top: 395px;
+      left: 126px;
+      width: 168px;
+      height: 58px;
+    }
+    &.blank{
+      &::-webkit-input-placeholder {
+        color: rgb(255, 0, 0);
+      }
+    }
+  }
+
+  .form2{
+    .box-form{ @include pic('form2.png', 616, 710);}
+    .code, .btn-verify{ display: none;}
+    .nickname{ top: 220px;}
+    .tel{ top: 352px;}
+  }
+}
+
+// music
+#btn-audio {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 10;
+  background-size: contain;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  @include pic('music-box.png', 95, 96);
+  .audio-box{
+    @include pic('music-off.png', 84, 83);
+    left: 5px;
+    top: 6px;
+  }
+  &.on .audio-box{
+    @include pic('music-on.png', 84, 83);
+    left: 5px;
+    top: 6px;
+    animation: rotate 4s infinite linear both;
+  }
+}
+
+// animation: name duration timing-function(linear/ease) delay iteration-count(infinite) direction(alternate) fill-mode play-state
+
+// animation

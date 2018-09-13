@@ -1,0 +1,17 @@
+$sub_path: 'fruit/';
+.gameFruit{
+  #uistart{ height: 100vh;}
+  .bg{
+    @include pic('bg.jpg', 750, 1450);
+    left: 0;
+    top: 0;
+  }
+  .main-pic{
+    @include pic('main-pic.png', 750, 1450);
+    left: 0;
+    top: calc((100vh - 1450px) / 2);
+  }
+  .bottom{
+    @include pic('bottom.png', 750, 121);
+  }
+}

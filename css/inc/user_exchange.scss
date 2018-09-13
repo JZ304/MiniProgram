@@ -1,0 +1,107 @@
+$sub_path: 'user/';
+.user .p2{
+  .top{
+    background: #13294b;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 0 28px;
+  }
+  .title{ font-size: 26px;}
+  .xf-value{
+    font-size: 72px;
+    position: relative;
+    &:before{
+      content: '';
+      @include pic('icon-xf.png', 26, 26);
+      position: absolute;
+      bottom: 20px;
+      left: -30px;
+    }
+  }
+  .btn-mall{
+    @include pic('btn-mall.png', 143, 45);
+    position: static;
+  }
+
+  .box{ padding: 75px 75px 60px;}
+  .tips{ @include pic('tips-exchange.png', 562, 63);}
+  .range-slider { margin: 95px 0 55px;}
+  .tag-box{
+    width: 472px;
+    margin-left: 45px;
+  }
+  .tag-cur{
+    position: absolute;
+    width: 90px;
+    left: -45px;
+    top: -80px;
+    color: #6b6666;
+    text-align: center;
+    font-size: 36px;
+  }
+  .range {
+    -webkit-appearance: none;
+    width: 562px;
+    height: 10px;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(#00bdff, #00bdff) no-repeat, #dbdbdb;
+    background-size: 0% 100%;
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #00bdff;
+      cursor: pointer;
+      border: 3px solid #0081e5;
+    }
+  }
+  .tag{
+    display: flex;
+    justify-content: space-between;
+    color: #6b6666;
+    font-size: 30px;
+    line-height: 70px;
+    width: 652px;
+    margin-left: -45px;
+    span{
+      width: 90px;
+      text-align: center;
+    }
+  }
+
+  .btn-exchange{
+    @include pic('btn-exchange2.png', 239, 74);
+    margin: 0 auto;
+    position: static;
+    &.disabled{
+      filter: grayscale(1);
+      &:before{
+        content: '您没有足够的鲜活豆，去玩游戏赚钱鲜活豆吧~';
+        position: absolute;
+        top: -30px;
+        font-size: 20px;
+        width: 700px;
+        text-align: center;
+        left: 25px;
+        top: 340px;
+        color: #666;
+      }
+    }
+  }
+  .info-xf{
+    @include pic('info-xf.png', 629, 418);
+    left: 42px;
+    top: 15px;
+    margin-bottom: 80px;
+  }
+
+  .success{
+    @include pic('box-success.png', 512, 503);
+    left: 145px;
+    top: 25vh;
+  }
+}

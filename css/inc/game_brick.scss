@@ -1,0 +1,68 @@
+$sub_path: 'brick/';
+.gameBrick{
+  background: #001940;
+  margin: 0;
+  .container{ background: #001940;}
+  .bg{
+    @include bg('bg.jpg', 750px, 100vh);
+    left: 0;
+    top: 0;
+  }
+  .btn-play{
+    @include pic('btn-play.png', 268, 118);
+    left: 241px;
+    top: 80vh;
+  }
+  .bottom{
+    @include pic('bottom.png', 750, 273);
+    left: 0;
+    bottom: 0;
+  }
+  .chance{ top: calc(82vh + 110px);}
+  .info-chanceout{ @include pic('info-chanceout.png', 311, 452);}
+
+  .result{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    span{
+      position: static;
+      color: #fff600;
+      padding-left: 10px;
+    }
+  }
+  .title{
+    color: #00afff;
+    margin-bottom: 36px;
+    font-size: 76px;
+    background:-webkit-linear-gradient(bottom,#00afff,#00ceff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    display: none;
+  }
+  #score{
+    font-size: 118px;
+    color:#fff600;
+    text-align: center;
+  }
+  .score2{
+    color: #01c3f9;
+    font-size: 54px;
+    line-height: 104px;
+  }
+  .bean{
+    color: #01c3f9;
+    font-size: 40px;
+  }
+  .re-bg{
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+
+  }
+  #uiend{
+    display: none;
+    position: relative;
+    width: 100%;
+    padding-top: 1rem;
+  }
+}

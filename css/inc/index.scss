@@ -1,0 +1,65 @@
+.btn-back{
+  @include pic('btn-back2.png', 218, 40);
+  // position: fixed !important;
+  position: absolute !important;
+  left: 32px;
+  top: 35px;
+}
+$sub_path: 'index/';
+.index{
+  .tips span{
+    @include pic('tips.png', 424, 336);
+    left: 164px;
+    top: 30vh;
+  }
+  .menu{
+    @include pic('bottom.png', 750, 302);
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    &.on{
+      .btn-collapse{ animation: bounceOut .7s both;}
+      .collapse{
+        display: block;
+        animation: bounceInUp .7s .7s both;
+      }
+      .btn-close{ animation: fadeInDownF .8s infinite both;}
+    }
+    &.off{
+      .collapse{ animation: bounceOutDown 1s both;}
+      .btn-collapse{ animation: bounceIn .7s .7s both;}
+    }
+  }
+  .btn-collapse{
+    @include pic('btn-collapse.png', 235, 119);
+    left: 257px;
+    bottom: 56px;
+  }
+  .collapse{
+    width: 750px;
+    height: 281px;
+    bottom: 0;
+    display: none;
+    position: absolute;
+  }
+  .btn-close{
+    @include pic('btn-close.png', 163, 91);
+    left: 293px;
+    bottom: 190px;
+  }
+  .btn-vane{
+    @include pic('btn-vane.png', 201, 169);
+    left: 70px;
+    bottom: 51px;
+  }
+  .btn-report{
+    @include pic('btn-report.png', 211, 161);
+    left: 269px;
+    bottom: 40px;
+  }
+  .btn-capsule{
+    @include pic('btn-capsule.png', 201, 178);
+    right: 70px;
+    bottom: 51px;
+  }
+}

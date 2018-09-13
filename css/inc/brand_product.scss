@@ -1,0 +1,168 @@
+$sub_path: 'product/';
+.products{
+  .bg{
+    @include bg('bg.jpg', 750px, 100vh);
+    left: 0;
+    top: 0;
+  }
+  .capsule{
+    @include pic('capsule.png', 490, 821);
+    top: calc((100vh - 1206px) / 2 + 40px + 2vh);
+    left: 130px;
+    z-index: 10;
+    .product{
+      width: 470px;
+      left: 0;
+      bottom: 110px;
+      opacity: 0;
+      transition: all .4s;
+      &.milk24{ @include pic('24.png', 470, 486);}
+      &.memory{ @include pic('memory.png', 470, 450);}
+      &.lb8{ @include pic('lb8.png', 470, 476);}
+      &.chuxin{ @include pic('chuxin.png', 470, 460);}
+      &.altiplano{ @include pic('altiplano.png', 470, 450);}
+      &.banana{  @include pic('banana.png', 470, 440);}
+      &.current{ opacity: 1;}
+    }
+    div span{
+      color: #31beff;
+      font-size: 20px;
+      text-align: center;
+      top: 50px;
+      width: 120px;
+      line-height: 26px;
+    }
+  }
+  .attr{
+    @include pic('attr.png', 240, 187);
+    left: -77px;
+    top: 205px;
+    span{ left: -10px;}
+  }
+  .skill{
+    @include pic('skill.png', 237, 212);
+    right: -76px;
+    top: 413px;
+    span{ right: -10px;}
+  }
+  .milk{ transition: all .7s ease-in;}
+  .showcase{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    bottom: calc((100vh - 1206px) / 4 + 100px);
+    overflow: hidden;
+    .milk24{
+      @include pic('24.png', 100, 190);
+      background-size: contain;
+      left: 225px;
+      top: 290px;
+      transform: rotate(10deg);
+    }
+    .memory{
+      @include pic('memory1.png', 100, 190);
+      background-size: contain;
+      left: 650px;
+      top: 210px;
+      transform: rotate(-15deg) scale(0.8);
+      opacity: 0.6;
+    }
+    .lb8{
+      @include pic('lb8.png', 100, 190);
+      background-size: contain;
+      left: 600px;
+      top: 0;
+      transform: rotate(15deg) scale(0.6);
+      opacity: 0.4;
+    }
+    .chuxin{
+      @include pic('chuxin1.png', 100, 190);
+      background-size: contain;
+      left: 325px;
+      top: -40px;
+      transform: rotate(15deg) scale(0.5);
+      opacity: 0.2;
+    }
+    .altiplano{
+      @include pic('altiplano1.png', 100, 190);
+      background-size: contain;
+      left: 50px;
+      top: 0;
+      transform: rotate(-5deg) scale(0.6);
+      opacity: 0.4;
+    }
+    .banana{
+      @include pic('banana.png', 100, 190);
+      background-size: contain;
+      left: 0;
+      top: 210px;
+      transform: rotate(5deg) scale(0.8);
+      opacity: 0.6;
+    }
+  }
+  .radar{
+    left: 380px;
+    bottom: 34px;
+    position: absolute;
+    &.r-milk24{
+      .g-milk24{display: block;}
+      .poly{ fill: #34FF8A;}
+    }
+    &.r-memory{
+      .g-memory{display: block;}
+      .poly{ fill: #ff5d67;}
+    }
+    &.r-lb8{
+      .g-lb8{display: block;}
+      .poly{ fill: #008aff;}
+    }
+    &.r-chuxin{
+      .g-chuxin{display: block;}
+      .poly{ fill: #00ccff;}
+    }
+    &.r-altiplano{
+      .g-altiplano{display: block;}
+      .poly{ fill: #bdff4f;}
+    }
+    &.r-banana{
+      .g-banana{display: block;}
+      .poly{ fill: #f1ff5b;}
+    }
+    g{ display: none;}
+    .st{
+      fill: #0A255A;
+      stroke: #00B5EC;
+      stroke-miterlimit: 10;
+    }
+    .st0{ stroke-width: 2;}
+    .st1{ stroke-width: 1.8;}
+    .st2{ stroke-width: 1.6;}
+    .poly {
+      opacity: 0.55;
+      stroke-miterlimit: 5;
+    }
+    .svg-txt{
+      fill: #00DCFA;
+      font-family: 'MicrosoftYaHei';
+      font-size: 13px;
+    }
+  }
+
+  .box-focus{
+    @include pic('box-focus.png', 404, 230);
+    bottom: 0;
+    left: 173px;
+  }
+  .btn-left{
+    @include pic('btn-left.png', 39, 53);
+    left: 110px;
+    bottom: 88px;
+    animation: fadeInRight 1s infinite both;
+  }
+  .btn-right{
+    @include pic('btn-right.png', 39, 53);
+    right: 110px;
+    bottom: 88px;
+    animation: fadeInLeft 1s infinite both;
+  }
+}

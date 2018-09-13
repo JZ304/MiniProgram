@@ -1,0 +1,194 @@
+$sub_path: 'user/';
+.user{
+  background: #f2f3f4;
+  .container{
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+  span{
+    position: static;
+  }
+  .box{
+    width: 716px;
+    background: #fff;
+    border: 2px solid #cfcfcf;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px 32px;
+  }
+}
+.user .p1{
+  @for $i from 1 through 4{
+    &.level#{$i} {
+      .icon-level{
+        @include pic('icon-level#{$i}.png', 88, 110);
+        margin-left: 33px;
+        margin-top: 8px;
+      }
+    }
+  }
+  &.level1{
+    .right2,.right3,.right4,.right5,.right6,.right7,.right8,.right9,.right10{ display: none;}
+  }
+  &.level2{
+    .right5,.right6,.right7,.right8,.right9,.right10{ display: none;}
+  }
+  &.level3{
+    .right4,.right6,.right8,.right10{ display: none;}
+  }
+  &.level4{
+    .right4,.right5,.right7{ display: none;}
+  }
+  .top{
+    @include pic('bg-top.png', 750, 359);
+    top: 0;
+    left: 0;
+  }
+  .avatar{
+    width: 226px;
+    height: 226px;
+    background: #0c3881;
+    border-radius: 50%;
+    border: 3px solid #00e4ff;
+    padding: 10px;
+    top: 70px;
+    left: 68px;
+    overflow-y: hidden;
+    img{
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .name{
+    top: 76px;
+    left: 324px;
+    font-size: 52px;
+    color: #fff;
+    width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .tag-bean{
+    @include pic('tag-bean.png', 156, 37);
+    top: 159px;
+    left: 324px;
+  }
+  .bean{
+    top: 214px;
+    left: 366px;
+    color: #ffea00;
+    font-size: 44px;
+    line-height: 44px;
+    &:before{
+      content: '';
+      @include pic('icon-bean.png', 31, 35);
+      position: absolute;
+      left: -42px;
+      top: 5px;
+    }
+  }
+  .btn-bean{
+    @include pic('btn-bean.png', 197, 27);
+    top: 16px;
+    left: 531px;
+  }
+  .btn-exchange{
+    @include pic('btn-exchange.png', 156, 50);
+    top: 76px;
+    left: 572px;
+  }
+
+  .title{
+    font-size: 32px;
+    line-height: 40px;
+    color: #2b2626;
+    margin-left: 20px;
+    &:before{
+      content: '';
+      width: 7px;
+      height: 26px;
+      position: absolute;
+      background: #ffc900;
+      top: 10px;
+      left: -20px;
+    }
+  }
+  // 成长等级
+  .box-level{
+    margin-top: 26px;
+  }
+  .growth-val{
+    color: #fff;
+    line-height: 35px;
+    bottom: 40px;
+    font-size: 24px;
+    text-align: right;
+  }
+  .level-cont{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+  }
+  .level-txt{
+    font-size: 30px;
+    line-height: 40px;
+    color: #ffc900;
+    margin-bottom: 8px;
+  }
+  .txt{
+    color: #6b6666;
+    font-size: 24px;
+    line-height: 38px;
+    width: 480px;
+    display: flex;
+    justify-content: space-between;
+    span{ position: static;}
+  }
+  .next-level{
+    left: 455px;
+  }
+  .level{
+    width: 480px;
+    height: 35px;
+    background: #dbdbdb;
+    color: #00bdff;
+    &::-webkit-progress-value{
+      background: #00bdff;
+    }
+    &::-webkit-progress-bar{
+      background: #dbdbdb;
+    }
+  }
+  .next-num{
+    color: #6b6666;
+    font-size: 30px;
+    text-align: right;
+  }
+
+  // 会员权益
+  .rights{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 60px 30px 40px;
+    &:after{
+      content: '';
+      width: 175px;
+    }
+  }
+  @for $i from 1 through 10{
+    .right#{$i} { @include pic('right#{$i}.png', 173, 136);}
+  }
+  .box-bean{
+    @include pic('rule-bean.png', 750, 904);
+    left: 0;
+    top: calc((100vh - 904px) / 2);
+  }
+  .btn-close{
+    @include pic('btn-close.png', 85, 85);
+    right: 20px;
+    top: -30px;
+  }
+}

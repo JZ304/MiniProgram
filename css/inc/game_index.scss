@@ -1,0 +1,169 @@
+.btn-back2{
+  @include pic('btn-back2.png', 218, 40);
+  // position: fixed;
+  position: absolute;
+  left: 32px;
+  top: 35px;
+}
+$sub_path: 'game/';
+// 游戏通用
+.bottom{
+  @include pic('bottom.png', 750, 216);
+  left: 0;
+  bottom: 0;
+}
+.btn-start{
+  @include pic('btn-play.png', 268, 118);
+  left: 241px;
+  top: 75vh;
+}
+.chance{
+  font-size: 28px;
+  color: #01c3f9;
+  text-align: center;
+  top: calc(77vh + 110px);
+}
+.result{
+  text-align: center;
+  span{
+    position: static;
+    color: #fff600;
+    padding-left: 10px;
+  }
+  .title{
+    color: #00afff;
+    margin-bottom: 36px;
+    font-size: 76px;
+    background:-webkit-linear-gradient(bottom,#00afff,#00ceff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    padding-top: calc((100vh - 1206px) / 2 + 5vh + 120px);
+    display: none;
+    &.title2{ display: block;}
+  }
+  #score{
+    font-size: 118px;
+    color:#fff600;
+    text-align: center;
+  }
+  .score2{
+    color: #01c3f9;
+    font-size: 54px;
+    line-height: 104px;
+  }
+  .bean{
+    color: #01c3f9;
+    font-size: 40px;
+  }
+}
+.info-chanceout{
+  left: 205px;
+  top: 20vh;
+  @include pic('chanceout.png', 311, 452);
+}
+.btn-restart{
+  @include pic('btn-restart.png', 188, 147);
+  right: 166px;
+  top: 20vh;
+}
+.btn-home{
+  @include pic('btn-home.png', 188, 147);
+  left: 166px;
+  top: 20vh;
+}
+.btn-tomorrow{
+  @include pic('btn-tomorrow.png', 212, 112);
+  left: 269px;
+  top: calc(40vh + 300px);
+}
+.btn-share{
+  @include pic('btn-share.png', 200, 94);
+  left: 275px;
+  top: calc(20vh + 200px);
+}
+.share span{
+  @include pic('share.png', 682, 518);
+  left: 28px;
+  top: 21px;
+}
+// 游戏首页
+.game-center{
+  .bg{
+    @include pic('bg.jpg', 750, 1450);
+    left: 0;
+    top: 0;
+  }
+  .cow{
+    @include pic('cow1.png', 332, 488, left);
+    left: 209px;
+    top: 12vh;
+    animation: loop 1.8s infinite steps(10) both;
+  }
+  .game-brick{
+    @include pic('game-brick.png', 327, 249);
+    left: -6px;
+    top: 48vh;
+    animation: fadeInLeft .4s .4s both;
+  }
+  .game-jump{
+    @include pic('game-jump.png', 327, 249);
+    right: -6px;
+    top: 48vh;
+    animation: fadeInRight .4s .8s both;
+  }
+  .game-fruit{
+    @include pic('game-fruit.png', 327, 249);
+    left: -6px;
+    top: calc(56vh + 120px);
+    animation: fadeInLeft .4s 1.2s both;
+  }
+  .game-pick{
+    @include pic('game-pick.png', 327, 249);
+    right: -6px;
+    top: calc(56vh + 120px);
+    animation: fadeInRight .4s 1.6s both;
+  }
+  .btn-rule{
+    @include pic('btn-rule.png', 140, 41);
+    left: 305px;
+    bottom: calc((100vh - 1206px) / 4 + 60px);
+  }
+  .box-rule{
+    @include pic('rule.png', 635, 856);
+    @include rsize(top, 100px);
+    left: 71px;
+  }
+  .btn-back{
+    @include pic('btn-back.png', 253, 230);
+    top: calc((100vh - 1206px) / 2 + 800px + 10vh);
+    left: 248px;
+  }
+  .btn-index{
+    @include pic('btn-index.png', 273, 36);
+    left: 32px;
+    top: 35px;
+  }
+  .unopen{ filter: grayscale(1);}
+}
+
+#application-canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+#application-canvas.fill-mode-NONE {
+  margin: auto;
+}
+#application-canvas.fill-mode-KEEP_ASPECT {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+#application-canvas.fill-mode-FILL_WINDOW {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
