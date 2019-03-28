@@ -91,6 +91,14 @@ class IndexController extends ServiceController
         }
     }
 
+    /*
+     * 测试添加小程序
+     *
+     * */
+    public function addMiniProgramAction(){
+        $this->successResponse('123');
+    }
+
 
 
 }
